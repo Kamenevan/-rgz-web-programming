@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="КуйбышевАзот">
+    <title>КуйбышевАзот</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="finance" href="finance.html">
+    <link rel="date" href="date.html">
+    <link rel="video" href="video.html">
+<style>
+table{
+    margin: 20px;
+    margin-left: 170px;
+    width: 70%;
+    border-style: outset;
+    border-color: #0060A9;
+    border-width: 13px;
+    background: linear-gradient(#0060A9, rgb(141, 141, 245));
+}
+
+th, td{
+    text-align: left;
+    text-shadow: 3px 3px 3px rgb(226, 223, 223);
+    color:white;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #17344a;
+}
+
+th{
+    background-color: #0060A9;
+}
+
+h2{
+    margin-block-start: 40px;
+    font-weight: bold;
+    color:  #0060A9;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 3px 5px 6px #808080
+}
+
+.info-block1 {
+    display: none;
+    width: 30%;
+    margin: 15px;
+    padding: 20px;
+    margin-right: 70px;
+    background-color: #0060A9;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #888888;
+    align-items: center;
+}
+
+.show-info1 {
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: #0060A9;
+    color: white;
+    border-radius: 10px;
+    margin: 40px;
+    cursor: pointer;
+}
+
+.info-block2 {
+    display: none;
+    width: 30%;
+    margin: 15px;
+    padding: 20px;
+    margin-right: 70px;
+    background-color: #0060A9;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #888888;
+    align-items: center;
+
+}
+
+.show-info2 {
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: #0060A9;
+    color: white;
+    border-radius: 10px;
+    margin: 40px;
+    cursor: pointer;
+}
+
+.info-block3 {
+    display: none;
+    width: 30%;
+    margin: 15px;
+    padding: 20px;
+    margin-right: 70px;
+    background-color: #0060A9;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #888888;
+    align-items: center;
+}
+
+.show-info3 {
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: #0060A9;
+    color: white;
+    border-radius: 10px;
+    margin: 40px;
+    cursor: pointer;
+}
+
+.info-block4 {
+    display: none;
+    width: 30%;
+    margin: 15px;
+    padding: 20px;
+    margin-right: 70px;
+    background-color: #0060A9;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #888888;
+    align-items: center;
+}
+
+.show-info4 {
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: #0060A9;
+    color: white;
+    border-radius: 10px;
+    margin: 40px;
+    cursor: pointer;
+}
+
+.info-block5 {
+    display: none;
+    width: 30%;
+    margin: 15px;
+    padding: 20px;
+    margin-right: 70px;
+    background-color: #0060A9;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #888888;
+    align-items: center;
+}
+
+.show-info5 {
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: #0060A9;
+    color: white;
+    border-radius: 10px;
+    margin: 40px;
+    cursor: pointer;
+}
+
+
+
+div1{
+    margin-top: 60px;
+    text-align: center;
+    margin-left: 170px;
+    display: inline-block;
+    padding-left: 5%;
+    width: 200px;
+    height: 450px;
+}
+
+div2{
+    margin-top: 45px;
+    text-align: center;
+    display: inline-block;
+    padding-left: 5%;
+    width: 450px;
+    height: 450px;
+    float: right;
+}
+
+body{
+    background-color: rgb(226, 221, 214);
+}
+
+
+</style>
+</head>
+<body>
+    <header>
+        <span class="logo">
+        <img src="https://s3-symbol-logo.tradingview.com/kuibyshevazot--big.svg" alt>
+        </span>
+        <span class="text-logo">
+        <b>КуйбышевАзот</b>
+        </span>
+    </header>
+    
+    <nav class="top-menu">
+        <ul>
+        <li><a href="rgz.html">О компании</a></li>
+        <li><a href="finance.html" class="active">Основные финансовые показатели</a></li>
+        <li><a href="date.html">Контактные данные</a></li>
+        <li><a href="video.html">Видео</a></li>
+        </ul>
+    </nav>    
+
+   
+    <div1>
+        <div class="show-info1">Капитализация на конец апреля</div>
+        <div class="show-info2">Общее число депозитарных расписок</div>
+        <div class="show-info3">Максимальная цена</div>
+        <div class="show-info4">Минимальная цена</div>
+        <div class="show-info5">Среднеквадратическое отклонение</div>
+    </div1>
+
+    <div2>
+        <div class="info-block1">
+        <p>12,5 млрд рублей</p>
+        </div>
+        
+        <div class="info-block2">
+        <p>6 250 000 штук</p>
+        </div>
+    
+        <div class="info-block3">
+        <p><span id="maxPrice"></span>&nbsp рублей</p>
+        </div>
+        
+        <div class="info-block4">
+        <p><span id="minPrice"></span>&nbsp рублей</p>
+        </div>
+        
+        <div class="info-block5">
+        <p><span id="stdDeviation"></span></p>
+        </div>
+    </div2>
+ <div>
+    <table>
+        <h2>Таблица с ценами закрытия за весь апрель</h2>
+        <tr>
+        <th>Дата</th>
+        <th>Цена закрытия</th>
+        </tr>
+        <tr>
+        <td>1 апреля</td>
+        <td>612 рублей</td>
+        </tr>
+        <tr>
+        <td>2 апреля</td>
+        <td>640 рублей</td>
+        </tr>
+        <tr>
+        <td>3 апреля</td>
+        <td>640 рубля</td>
+        </tr>
+        <tr>
+        <td>4 апреля</td>
+        <td>646 рублей</td>
+        </tr>
+        <tr>
+        <td>5 апреля</td>
+        <td>649 рубля</td>
+        </tr>
+        <tr>
+        <td>6 апреля</td>
+        <td>670 рублей</td>
+        </tr>
+        <tr>
+        <td>7 апреля</td>
+        <td>676 рублей</td>
+        </tr>
+        <tr>
+        <td>8 апреля</td>
+        <td>677 рублей</td>
+        </tr>
+        <tr>
+        <td>9 апреля</td>
+        <td>679 рублей</td>
+        </tr>
+        <tr>
+        <td>10 апреля</td>
+        <td>682 рублей</td>
+        </tr>
+        <tr>
+        <td>11 апреля</td>
+        <td>686 рублей</td>
+        </tr>
+        <tr>
+        <td>12 апреля</td>
+        <td>663 рублей</td>
+        </tr>
+        <tr>
+        <td>13 апреля</td>
+        <td>664 рублей</td>
+        </tr>
+        <tr>
+        <td>14 апреля</td>
+        <td>667 рубля</td>
+        </tr>
+        <tr>
+        <td>15 апреля</td>
+        <td>674 рублей</td>
+        </tr>
+        <tr>
+        <td>16 апреля</td>
+        <td>675 рубля</td>
+        </tr>
+        <tr>
+        <td>17 апреля</td>
+        <td>670 рублей</td>
+        </tr>
+        <tr>
+        <td>18 апреля</td>
+        <td>671 рублей</td>
+        </tr>
+        <tr>
+        <td>19 апреля</td>
+        <td>671 рублей</td>
+        </tr>
+        <tr>
+        <td>20 апреля</td>
+        <td>670 рублей</td>
+        </tr>
+        <tr>
+        <td>21 апреля</td>
+        <td>670 рублей</td>
+        </tr>
+        <tr>
+        <td>22 апреля</td>
+        <td>670 рублей</td>
+        </tr>
+        <tr>
+        <td>23 апреля</td>
+        <td>667 рублей</td>
+        </tr>
+        <tr>
+        <td>24 апреля</td>
+        <td>667 рублей</td>
+        </tr>
+        <tr>
+        <td>25 апреля</td>
+        <td>670 рубля</td>
+        </tr>
+        <tr>
+        <td>26 апреля</td>
+        <td>671 рублей</td>
+        </tr>
+        <tr>
+        <td>27 апреля</td>
+        <td>670 рубля</td>
+        </tr>
+        <tr>
+        <td>28 апреля</td>
+        <td>672 рублей</td>
+        </tr>
+        <tr>
+        <td>29 апреля</td>
+        <td>669 рублей</td>
+        </tr>
+        <tr>
+        <td>30 апреля</td>
+        <td>670 рублей</td>
+        </tr>
+        </table>
+    </div>
+
+    <script>
+        const prices = [612, 640, 640, 646, 649, 670, 676, 677, 679, 682, 686, 663, 664, 667, 674, 675, 670, 671, 671, 670, 674, 670, 669, 670, 667, 667, 670, 671];
+    
+        const minPrice = Math.min(...prices);
+        const maxPrice = Math.max(...prices);
+        const mean = prices.reduce((a, b) => a + b) / prices.length;
+        const stdDeviation = Math.sqrt(prices.reduce((a, b) => a + (b - mean) ** 2, 0) / prices.length);
+    
+        document.getElementById("minPrice").textContent = minPrice;
+        document.getElementById("maxPrice").textContent = maxPrice;
+        document.getElementById("mean").textContent = mean.toFixed(2);
+        document.getElementById("stdDeviation").textContent = stdDeviation.toFixed(2);
+    
+    </script>
+
+    <script>
+
+        var showInfoBtn1 = document.querySelector('.show-info1');
+        var showBlock1 = document.querySelector('.info-block1');
+
+        var showInfoBtn2 = document.querySelector('.show-info2');
+        var showBlock2 = document.querySelector('.info-block2');
+
+        var showInfoBtn3 = document.querySelector('.show-info3');
+        var showBlock3 = document.querySelector('.info-block3');
+
+        var showInfoBtn4 = document.querySelector('.show-info4');
+        var showBlock4 = document.querySelector('.info-block4');
+
+        var showInfoBtn5 = document.querySelector('.show-info5');
+        var showBlock5 = document.querySelector('.info-block5');
+
+        showInfoBtn1.addEventListener('click', function() {
+        showBlock1.style.display = 'block';
+        });
+
+        showInfoBtn2.addEventListener('click', function() {
+        showBlock2.style.display = 'block';
+        });
+
+        showInfoBtn3.addEventListener('click', function() {
+        showBlock3.style.display = 'block';
+        });
+
+        showInfoBtn4.addEventListener('click', function() {
+        showBlock4.style.display = 'block';
+        });
+
+        showInfoBtn5.addEventListener('click', function() {
+        showBlock5.style.display = 'block';
+        });
+
+    </script>
+</body>
+</html>
