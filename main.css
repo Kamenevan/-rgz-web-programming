@@ -39,18 +39,17 @@ header{
 }
     
 menu{
-    position: relative; /* Изменяем позиционирование меню на relative */
+    position: fixed; 
 }
     
 /*стили для меню */
 .top-menu{
-    position: relative;
-    top: 30px; /* Устанавливаем отступ сверху, чтобы меню не перекрывало шапку */
-    left: 0;
+    position: fixed;
+    top: 0px; /* Устанавливаем отступ сверху, чтобы меню не перекрывало шапку */
+    left: 400;
     background-color: #0060A9;
     z-index: 0;
-    border-radius: 20px;
-    margin: 20px;
+    margin: 0px;
 }
     
 .top-menu ul{
