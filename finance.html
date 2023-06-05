@@ -169,6 +169,30 @@ h2{
     cursor: pointer;
 }
 
+.info-block6 {
+    display: none;
+    width: 30%;
+    margin: 15px;
+    padding: 20px;
+    margin-right: 70px;
+    background-color: #0060A9;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #888888;
+    align-items: center;
+}
+
+.show-info6 {
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: #0060A9;
+    color: white;
+    border-radius: 10px;
+    margin: 40px;
+    cursor: pointer;
+}
 
 
 div1{
@@ -205,17 +229,20 @@ body{
         </span>
         <span class="text-logo">
         <b>КуйбышевАзот</b>
+
+        <nav class="top-menu">
+            <ul>
+            <li><a href="rgz.html">О компании</a></li>
+            <li><a href="finance.html" class="active">Основные финансовые показатели</a></li>
+            <li><a href="date.html">Контактные данные</a></li>
+            <li><a href="video.html">Видео</a></li>
+            </ul>
+        </nav>
+
         </span>
     </header>
     
-    <nav class="top-menu">
-        <ul>
-        <li><a href="rgz.html">О компании</a></li>
-        <li><a href="finance.html" class="active">Основные финансовые показатели</a></li>
-        <li><a href="date.html">Контактные данные</a></li>
-        <li><a href="video.html">Видео</a></li>
-        </ul>
-    </nav>    
+        
 
    
     <div1>
@@ -223,6 +250,7 @@ body{
         <div class="show-info2">Общее число депозитарных расписок</div>
         <div class="show-info3">Максимальная цена</div>
         <div class="show-info4">Минимальная цена</div>
+        <div class="show-info6">Средняя цена</div>
         <div class="show-info5">Среднеквадратическое отклонение</div>
     </div1>
 
@@ -243,6 +271,10 @@ body{
         <p><span id="minPrice"></span>&nbsp рублей</p>
         </div>
         
+        <div class="info-block6">
+            <p><span id="avgPrice"></span>&nbsp рублей</p>
+        </div>
+
         <div class="info-block5">
         <p><span id="stdDeviation"></span></p>
         </div>
@@ -380,17 +412,19 @@ body{
     <script>
         const prices = [612, 640, 640, 646, 649, 670, 676, 677, 679, 682, 686, 663, 664, 667, 674, 675, 670, 671, 671, 670, 674, 670, 669, 670, 667, 667, 670, 671];
     
-        const minPrice = Math.min(...prices);
-        const maxPrice = Math.max(...prices);
-        const mean = prices.reduce((a, b) => a + b) / prices.length;
-        const stdDeviation = Math.sqrt(prices.reduce((a, b) => a + (b - mean) ** 2, 0) / prices.length);
-    
+        const minPrice = Math.min(...prices);/*Рассчитываем минимальную цену*/
+        const maxPrice = Math.max(...prices);/*Рассчитываем max цену*/
+        const avgPrice = prices.reduce((a, b) => a + b) / prices.length;/*Рассчитываем среднюю цену*/
+        const variance = prices.reduce((a, b) => a + Math.pow(b - avgPrice, 2), 0) / prices.length;
+        const stdDeviation = Math.sqrt(variance);
+        
         document.getElementById("minPrice").textContent = minPrice;
         document.getElementById("maxPrice").textContent = maxPrice;
-        document.getElementById("mean").textContent = mean.toFixed(2);
+        document.getElementById("avgPrice").textContent = avgPrice.toFixed(2);
         document.getElementById("stdDeviation").textContent = stdDeviation.toFixed(2);
-    
+        
     </script>
+
 
     <script>
 
@@ -405,6 +439,9 @@ body{
 
         var showInfoBtn4 = document.querySelector('.show-info4');
         var showBlock4 = document.querySelector('.info-block4');
+
+        var showInfoBtn6 = document.querySelector('.show-info6');
+        var showBlock6 = document.querySelector('.info-block6');
 
         var showInfoBtn5 = document.querySelector('.show-info5');
         var showBlock5 = document.querySelector('.info-block5');
@@ -423,6 +460,10 @@ body{
 
         showInfoBtn4.addEventListener('click', function() {
         showBlock4.style.display = 'block';
+        });
+
+        showInfoBtn6.addEventListener('click', function() {
+        showBlock6.style.display = 'block';
         });
 
         showInfoBtn5.addEventListener('click', function() {
